@@ -1,11 +1,13 @@
 import Nav from "../compenents/Nav"
-import { Hero } from "../compenents/Hero"
+import { Outlet } from "react-router-dom"
 
 const Home = () => {
   return (
     <>
-    <Nav></Nav>
-    <Hero></Hero>
+    <div>
+      <Nav></Nav>
+      <Outlet/>
+    </div>
     </>
   )
 }

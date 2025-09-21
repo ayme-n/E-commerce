@@ -1,18 +1,20 @@
-import { favicon , account , search , cart} from "../assets/assets"
+import { uxidia , account , search , cart} from "../assets/assets"
 import { Link } from "react-router-dom"
+
 const Nav = () => {
+
   return (
-    <div className="flex justify-between items-center  w-full px-6 py-3 border-b-1 border-gray-300 ">
+    <div className="flex z-20 justify-between items-center h-[10vh] sticky top-0 bg-white  w-full px-6 py-3 border-b-1 border-gray-300 ">
     
-        <Link to={"/"}><img src={favicon} alt="" /></Link>
+        <Link to={"/"}><img src={uxidia} width={90} alt="" /></Link>
         
-        <div className="ml-14" >
+        <div >
             <Link to={"/"}>Home</Link>
         </div>
 
         <div className="flex gap-x-2 ">
-            <Link to={"/"}><img src={account} alt="" /></Link>
-            <Link to={"/"}><img src={cart} alt="" /></Link>
+            <Link to={"/account"}><img src={account} alt="" /></Link>
+            <Link to={"/account/cart"}><img src={cart} alt="" /></Link>
             <Link to={"/"}><img src={search} alt="" /></Link>
         </div>
 

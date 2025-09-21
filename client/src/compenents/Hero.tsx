@@ -9,13 +9,13 @@ export const Hero = () => {
         
         <div className="flex overflow-hidden w-[100vw]  sm:w-[50vw]">
         
-            <Link to={"/"}><img src={men} alt=""  className=" transition delay-10 duration-1500 hover:scale-108"/></Link>
+            <Link to={"/men"}><img src={men} alt=""  className=" transition delay-10 duration-1500 hover:scale-108"/></Link>
 
         </div>
 
         <div className=" flex overflow-hidden w-[100vw]  sm:w-[50vw]">
         
-            <Link to={"/"}><img src={women} alt="" className="transition delay-10 duration-1500 hover:scale-108"  /></Link>
+            <Link to={"/women"}><img src={women} alt="" className="transition delay-10 duration-1500 hover:scale-108"  /></Link>
 
         </div>
     </div>
