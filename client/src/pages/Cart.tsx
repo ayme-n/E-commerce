@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import CartProduct from "../compenents/CartProduct";
 
 const Cart = () => {
-  const { SetDashboard_Current, getUser, Cart ,User} = useAppContext();
+  const { SetDashboard_Current, getUser, Cart } = useAppContext();
   const [Total, SetTotal] = useState(0);
 
   useEffect(() => {
