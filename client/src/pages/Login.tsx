@@ -2,11 +2,13 @@ import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Nav from '../compenents/Nav';
+import { useAppContext } from '../ApiContext/apicontext';
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 const Login = () => {
   const navigate = useNavigate();
+  const {SetToken} = useAppContext()
 
   const handleSuccess = async (credentialResponse: any) => {
 
@@ -15,7 +17,9 @@ const Login = () => {
     const res = await axios.post(`${BACKEND_URL}/auth`,{
       token
     })
+
     localStorage.setItem("token", res.data.client_token);
+    SetToken(res.data.client_token)
     navigate("/account");
   };
 

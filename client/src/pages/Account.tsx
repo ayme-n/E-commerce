@@ -1,19 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../compenents/Nav";
-import { isLoggedIn } from "../helpers/isLogedin";
 import Login from "./Login";
 import Dashboard_SideBar from "../compenents/Dashboard_SideBar";
-
-
+import { useAppContext } from "../ApiContext/apicontext";
 export const Account = () => {
 
-    const IsLoggedIn = isLoggedIn()
-  
+    const {token} = useAppContext()
 
   
 
   return (
-   IsLoggedIn ? (
+   token ? (
         <>
         <Nav></Nav>
         <div className="flex h-full ">

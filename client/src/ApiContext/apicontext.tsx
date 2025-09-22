@@ -51,6 +51,8 @@ type AppContextType = {
   User: User | null,
   Cart:Cart |null,
   SetCart:React.Dispatch<React.SetStateAction<Cart | null>>,
+  token:string | null,
+  SetToken:React.Dispatch<React.SetStateAction<null>>,
  
 };
 
@@ -65,6 +67,8 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
   const [User, setUser] = useState<User | null>(null); 
 
   const [Cart,SetCart]=useState<Cart | null >(null)
+
+  const [token,SetToken] = useState(null)
 
   const [dashboard_current,SetDashboard_Current]=useState("dashboard")
 
@@ -90,7 +94,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
       
     }
 
-  const value:AppContextType={dashboard_current,SetDashboard_Current, products,getProducts,BACKEND_URL,getUser,User,Cart,SetCart}
+  const value:AppContextType={dashboard_current,SetDashboard_Current, products,getProducts,BACKEND_URL,getUser,User,Cart,SetCart,token,SetToken}
 
 
 
